@@ -18,6 +18,9 @@ public class CountExample4 {
     //同时并发执行的线程数
     public static int threadTotal = 200;
 
+    /**
+     * volatile适合作为状态标识量
+     */
     public static volatile int count = 0;
 
     public static void main(String[] args) throws InterruptedException {
