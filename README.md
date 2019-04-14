@@ -33,8 +33,8 @@ AtomicBoolean：CompareAndSet（多线程只执行一次）
 ```
 **不可变集合类**
 ```bash
-Collections.unmodifiableXXX:Colllection、List、Set、Map...
-Guava:ImmutableXXX:Collection、List、Set、Map...
+Collections.unmodifiableXXX:Collection、List、Set、Map...
+Guava.ImmutableXXX:Collection、List、Set、Map...
 ```
 
 #### [5. 线程封闭 ][6]
@@ -44,6 +44,14 @@ Ad-hoc线程封闭：程序控制实现，最糟糕，忽略
 ThreadLocal线程封闭：特别好的封闭方法
 ```
 
+#### [6. 线程不安全类及写法 ][7]
+```bash
+StringBuilder->StringBuffer
+SimpleDateFormat -> JodaTime
+ArrayList,HashSet,HashMap等Collections 线程不安全
+先检查再执行：if(condition(a)){handle(a);} 线程不安全（并发不能保证原子性）
+```
+
 
 [1]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/atomic
 [2]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/sync
@@ -51,3 +59,4 @@ ThreadLocal线程封闭：特别好的封闭方法
 [4]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/singleton
 [5]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/immutable
 [6]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/threadLocal
+[7]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/commonUnsafe
