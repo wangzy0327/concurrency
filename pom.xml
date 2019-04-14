@@ -47,7 +47,13 @@
 			<version>1.16.10</version>
 		</dependency>
 
-	</dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
+        </dependency>
+
+    </dependencies>
 
 	<build>
 		<plugins>
