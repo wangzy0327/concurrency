@@ -1,4 +1,5 @@
 # concurrency
+## java并发
 #### [1. 原子性 Atomic包][1]
 ```bash
 AtomicXXX：CAS、Unsafe.CompareAndSwapInt
@@ -59,6 +60,21 @@ HashMap -> HashTable(key、value不能为null)
 Collections。synchronizedXXX(List、Set、Map)
 ```
 
+#### [8. 线程安全 - 并发容器 J.U.C ][9]
+```bash
+ArrayList -> CopyOnWriteArrayList
+HashSet、TreeSet -> CopyOnWriteArraySet、ConcurrentSkipListSet(key、value不能为null)
+HashMap、TreeMap -> ConcurrentHashMap、ConcurrentSkipListMap(List、Set、Map)
+```
+**安全共享对象策略-总结**
+```bash
+线程限制：一个被线程限制的对象，由线程独占，并且只能被占有它的线程修改
+共享只读：一个共享只读的对象，在没有额外同步的情况下，可以被多个线程并发访问，但是任何线程都不能修改它
+线程安全对象：一个线程安全的对象或者容器，在内部通过同步机制来保证线程安全，所以其他线程无需额外的同步就可以通过公共接口随意访问它
+被守护对象：被守护对象只能通过获取特定的锁来访问
+```
+
+
 
 [1]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/atomic
 [2]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/sync
@@ -68,3 +84,4 @@ Collections。synchronizedXXX(List、Set、Map)
 [6]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/threadLocal
 [7]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/commonUnsafe
 [8]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/syncContainer
+[8]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/concurrent
