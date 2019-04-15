@@ -52,6 +52,13 @@ ArrayList,HashSet,HashMap等Collections 线程不安全
 先检查再执行：if(condition(a)){handle(a);} 线程不安全（并发不能保证原子性）
 ```
 
+#### [7. 线程安全 - 同步容器 ][8]
+```bash
+ArrayList -> Vector，Stack
+HashMap -> HashTable(key、value不能为null)
+Collections。synchronizedXXX(List、Set、Map)
+```
+
 
 [1]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/atomic
 [2]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/sync
@@ -60,3 +67,4 @@ ArrayList,HashSet,HashMap等Collections 线程不安全
 [5]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/immutable
 [6]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/threadLocal
 [7]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/commonUnsafe
+[8]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/syncContainer
