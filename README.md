@@ -73,7 +73,7 @@ HashMap、TreeMap -> ConcurrentHashMap、ConcurrentSkipListMap(List、Set、Map)
 线程安全对象：一个线程安全的对象或者容器，在内部通过同步机制来保证线程安全，所以其他线程无需额外的同步就可以通过公共接口随意访问它
 被守护对象：被守护对象只能通过获取特定的锁来访问
 ```
-#### [8. J.U.C - (AbstractQueueSynchronizer)AQS ][10]
+#### [9. J.U.C - (AbstractQueueSynchronizer)AQS ][10]
 ```bash
 AQS同步组件：CountDownLatch、Semaphore、CyclicBarrier
 锁：ReentrantLock Synchronized StampedLock ReentrantReadWriteLock
@@ -90,4 +90,4 @@ Condition
 [7]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/commonUnsafe
 [8]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/syncContainer
 [9]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/concurrent
-[9]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/lock
+[10]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/lock
