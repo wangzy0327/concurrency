@@ -74,10 +74,38 @@ HashMap、TreeMap -> ConcurrentHashMap、ConcurrentSkipListMap(List、Set、Map)
 被守护对象：被守护对象只能通过获取特定的锁来访问
 ```
 #### [9. J.U.C - (AbstractQueueSynchronizer)AQS ][10]
-**[锁：ReentrantLock Synchronized StampedLock ReentrantReadWriteLock Condition][11]**
+**[锁：ReentrantLock Synchronized StampedLock ReentrantReadWriteLock Condition][11]<br>**
 **[J.U.C 拓展：FutureTask Fork/Join BlockingQueue][12]**
 ```bash
 AQS同步组件：CountDownLatch、Semaphore、CyclicBarrier
+```
+
+#### [10. 线程池 - ThreadPoolExecutor ][13]
+```bash
+参数：
+corePoolSize:核心线程数量
+maximumPoolSize:线程最大线程数
+workQueue：阻塞队列，存储等待执行的任务，很重要，会对线程池运行过程产生很大影响
+keepAliveTime:线程没有任务执行时最多保持多久时间终止
+unit:keepAliveTime的时间单位
+threadFactory:线程工厂，用来创建线程
+rejectHandler:当拒绝处理任务时的策略
+方法：
+execute():提交任务，交给线程池执行
+submit():提交任务，能够返回执行结果 execute+Future
+shutdown():关闭线程池，等待任务都执行完
+shutdownNow():关闭线程池，不等待任务都执行完
+getTaskCount():线程池已执行和未执行的任务总数
+getCompletedTaskCount():已完成的任务数量
+getPoolSize():线程池当前的线程数量
+getActiveCount():当前线程池中正在执行任务的线程数量
+```
+**线程池 - Executor框架接口**
+```bash
+Executors.newCachedThreadPool
+Executors.newFixedThreadPool
+Executors.newScheduledThreadPool
+Executors.newSingleThreadExecutor
 ```
 
 
@@ -93,3 +121,4 @@ AQS同步组件：CountDownLatch、Semaphore、CyclicBarrier
 [10]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/aqs
 [11]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/lock
 [12]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/aqs
+[13]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/threadPool
