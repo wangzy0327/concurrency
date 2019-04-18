@@ -107,6 +107,14 @@ Executors.newFixedThreadPool
 Executors.newScheduledThreadPool
 Executors.newSingleThreadExecutor
 ```
+**[死锁][14]**
+```bash
+ 死锁四个必要条件:
+ 1、互斥条件：一个资源只能被一个进程占用
+ 2、保持等待：一个进程请求资源而阻塞时，对已获得资源保持不放
+ 3、不剥夺条件：进程已获得资源，在未使用完之前，不能强行剥夺
+ 4、环路等待条件：若干进程之间形成一种头尾相接的循环等待资源关系
+```
 
 
 [1]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/atomic
@@ -122,3 +130,4 @@ Executors.newSingleThreadExecutor
 [11]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/lock
 [12]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/aqs
 [13]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/threadPool
+[14]:https://github.com/wangzy0327/concurrency/tree/master/src/main/java/com/mmall/concurrency/example/deadLock
